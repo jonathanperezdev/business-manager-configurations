@@ -28,7 +28,15 @@ management:
   endpoint:
     health:
       enabled: true
+    info:
+      enabled: true
   endpoints:
     web:
       exposure:
-        include: health
+        include: health,info
+
+info:
+  business-manager-empleado:
+    name: Business Manager Empleado
+    description: This application supports the administration of the employees of B&C company
+    version: 1.0
