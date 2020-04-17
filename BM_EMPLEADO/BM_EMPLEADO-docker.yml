@@ -21,6 +21,7 @@ spring:
       discovery:
         enabled: true
         service-id: BM_CONFIGURATION
+      failFast: true
   jpa:
     properties:
       hibernate:

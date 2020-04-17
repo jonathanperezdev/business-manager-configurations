@@ -3,26 +3,25 @@ eureka:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-      #defaultZone: ${EUREKA_SERVER:http://discovery:8761/eureka}
       defaultZone: ${EUREKA_SERVER:http://localhost:8761/eureka}
   instance:
     preferIpAddress: true
-
-server:
-  port: 5555
 
 spring:
   cloud:
     gateway:
       discovery:
-        enabled: true
         locator:
-          #Enabled create routes based on services registered with a DiscoveryClient
-          enabled: true
+          #Enabled in true create routes based on services registered with a DiscoveryClient
+          enabled: false
+      routes:
+        - id: BM_EMPLEADO
+          uri: BM_EMPLEADO:8001
     config:
       discovery:
         enabled: true
         service-id: BM_CONFIGURATION
+      failFast: true
 
 # Enable the gateway endpoints to get by example the routes (http://localhost:5555/actuator/gateway/routes/)
 management:
@@ -33,10 +32,12 @@ management:
       enabled: true
     info:
       enabled: true
+    refresh:
+      enabled: true
   endpoints:
     web:
       exposure:
-        include: gateway,health,info
+        include: gateway,health,info,refresh
 
 info:
   business-manager-gateway:
