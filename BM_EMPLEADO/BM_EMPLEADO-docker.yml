@@ -1,7 +1,11 @@
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_SERVER:http://BM-DISCOVERY:8761/eureka}
+  instance:
+    preferIpAddress: true
 spring:
   datasource:
     url: jdbc:postgresql://BM-DB-EMPLEADO:5432/postgres
