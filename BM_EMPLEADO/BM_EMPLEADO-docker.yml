@@ -15,12 +15,12 @@ spring:
     #Don't delete this property because does not work -Dspring.profiles.active=docker in docker-compouse.yml
     active: docker
   application:
-    name: BM_EMPLEADO
+    name: BMEMPLEADO
   cloud:
     config:
       discovery:
         enabled: true
-        service-id: BM_CONFIGURATION
+        service-id: BMCONFIGURATION
       failFast: true
   jpa:
     properties:

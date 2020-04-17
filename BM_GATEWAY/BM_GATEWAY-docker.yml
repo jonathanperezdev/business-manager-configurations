@@ -17,8 +17,13 @@ spring:
     config:
       discovery:
         enabled: true
-        service-id: BM_CONFIGURATION
+        service-id: BMCONFIGURATION
       failFast: true
+  profiles:
+    #Don't delete this property because does not work -Dspring.profiles.active=docker in docker-compouse.yml
+    active: docker
+  application:
+    name: BMEMPLEADO
 
 # Enable the gateway endpoints to get by example the routes (http://localhost:5555/actuator/gateway/routes/)
 management:
