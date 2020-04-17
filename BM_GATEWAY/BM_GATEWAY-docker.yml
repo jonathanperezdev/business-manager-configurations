@@ -13,12 +13,7 @@ spring:
       discovery:
         locator:
           #Enabled in true create routes based on services registered with a DiscoveryClient
-          enabled: false
-      routes:
-        - id: bm_empleado
-          uri: http://BM-EMPLEADO:8000
-          predicates:
-            - Path=/empleado/**
+          enabled: true
     config:
       discovery:
         enabled: true
