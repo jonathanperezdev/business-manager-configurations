@@ -23,7 +23,7 @@ spring:
     #Don't delete this property because does not work -Dspring.profiles.active=docker in docker-compouse.yml
     active: docker
   application:
-    name: BMEMPLEADO
+    name: BMGATEWAY
 
 # Enable the gateway endpoints to get by example the routes (http://localhost:5555/actuator/gateway/routes/)
 management:
