@@ -15,8 +15,8 @@ spring:
           #Enabled in true create routes based on services registered with a DiscoveryClient
           enabled: false
       routes:
-        - id: BM_EMPLEADO
-          uri: BM_EMPLEADO:8001
+        - id: BM-EMPLEADO
+          uri: http://BM-EMPLEADO:8000
     config:
       discovery:
         enabled: true
