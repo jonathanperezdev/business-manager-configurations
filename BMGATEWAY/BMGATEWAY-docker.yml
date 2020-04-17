@@ -13,7 +13,7 @@ spring:
       discovery:
         locator:
           #Enabled in true create routes based on services registered with a DiscoveryClient
-          enabled: false
+          enabled: true
     config:
       discovery:
         enabled: true
