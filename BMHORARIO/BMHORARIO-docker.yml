@@ -1,0 +1,47 @@
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:http://BMDISCOVERY:8761/eureka}
+  instance:
+    preferIpAddress: true
+spring:
+  datasource:
+    url: jdbc:postgresql://BMDBHORARIO:5433/postgres
+    username: postgres
+    password: postgres
+  profiles:
+    #Don't delete this property because does not work -Dspring.profiles.active=docker in docker-compouse.yml
+    active: docker
+  application:
+    name: BMHORARIO
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: BMCONFIGURATION
+      failFast: true
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: validate
+
+# Expose health and info endpoints to be consumed in web
+management:
+  endpoint:
+    health:
+      enabled: true
+    info:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+info:
+  business-manager-horario:
+    name: Business Manager Horario
+    description: This application supports the definitions of the worked hours for the employees of B&C company
+    version: 1.0
