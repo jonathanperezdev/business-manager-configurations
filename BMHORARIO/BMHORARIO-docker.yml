@@ -8,6 +8,7 @@ eureka:
     preferIpAddress: true
 spring:
   datasource:
+    url: jdbc:postgresql://BMDBHORARIO:5432/postgres
     username: postgres
     password: postgres
   profiles:
