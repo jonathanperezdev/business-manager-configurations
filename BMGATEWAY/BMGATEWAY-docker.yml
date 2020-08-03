@@ -24,6 +24,11 @@ spring:
     active: docker
   application:
     name: BMGATEWAY
+api:
+  empleado:
+    version: v1
+  horario:
+    version: v1
 
 # Enable the gateway endpoints to get by example the routes (http://localhost:5555/actuator/gateway/routes/)
 management:
