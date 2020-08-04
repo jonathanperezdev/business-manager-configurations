@@ -45,3 +45,8 @@ info:
     name: Business Manager Empleado
     description: This application supports the administration of the employees of B&C company
     version: 1.0
+
+api:
+  empleado:
+    version: v1
+    path: empleado

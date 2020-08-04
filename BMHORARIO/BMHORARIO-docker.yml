@@ -45,3 +45,8 @@ info:
     name: Business Manager Horario
     description: This application supports the definitions of the worked hours for the employees of B&C company
     version: 1.0
+
+api:
+  horario:
+    version: v1
+    path: horario
