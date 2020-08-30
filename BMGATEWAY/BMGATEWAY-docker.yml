@@ -29,6 +29,8 @@ api:
     version: v1
   horario:
     version: v1
+  nomina:
+    version: v1
 
 # Enable the gateway endpoints to get by example the routes (http://localhost:5555/actuator/gateway/routes/)
 management:
