@@ -30,6 +30,9 @@ spring:
         parametros-out:
           destination: parametrosTopic
           contentType: application/json
+        empleados-in:
+          destination: empleadosTopic
+          contentType: application/json
   jpa:
     properties:
       hibernate:

@@ -22,6 +22,14 @@ spring:
         enabled: true
         service-id: BMCONFIGURATION
       failFast: true
+    stream:
+      kafka:
+        binder:
+          brokers: BMKAFKA:9092
+      bindings:
+        empleados-out:
+          destination: empleadosTopic
+          contentType: application/json
   jpa:
     properties:
       hibernate:
