@@ -35,7 +35,13 @@ spring:
           contentType: application/json
           consumer:
             #Max number of retries when exception is thrown when message is processing
-            maxAttempts: 3
+            maxAttempts: 2
+        ubicaciones-in:
+          destination: ubicacionesTopic
+          contentType: application/json
+          consumer:
+            #Max number of retries when exception is thrown when message is processing
+            maxAttempts: 2
   jpa:
     properties:
       hibernate:

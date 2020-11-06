@@ -30,6 +30,9 @@ spring:
         empleados-out:
           destination: empleadosTopic
           contentType: application/json
+        ubicaciones-out:
+          destination: ubicacionesTopic
+          contentType: application/json
   jpa:
     properties:
       hibernate:
