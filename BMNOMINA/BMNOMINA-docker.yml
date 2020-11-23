@@ -39,6 +39,12 @@ spring:
           consumer:
             #Max number of retries when exception is thrown when message is processing
             maxAttempts: 2
+        periodos-pago-in:
+          destination: periodosPagoTopic
+          contentType: application/json
+          consumer:
+            #Max number of retries when exception is thrown when message is processing
+            maxAttempts: 2
   jpa:
     properties:
       hibernate:
